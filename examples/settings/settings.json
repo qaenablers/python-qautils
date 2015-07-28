@@ -1,0 +1,20 @@
+{
+    "environment": {
+        "name": "integration",
+        "logs_path": "/var/logs"
+    },
+    "remote_logs": {
+      "capture_local_path": "./logs/remote"
+    },
+    "example_http_service": {
+        "protocol": "http",
+        "host": "1.2.3.5",
+        "port": "5678",
+        "resource": "myservice/base",
+        "host_user": "root",
+        "host_password": "",
+        "private_key_location": "./service_host_dsa",
+        "service_log_path": "/var/log/http_service/",
+        "service_log_file_name": "http.log"
+    }
+}
