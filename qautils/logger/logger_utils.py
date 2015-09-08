@@ -23,7 +23,6 @@ import logging.config
 from xml.dom.minidom import parseString
 import json
 import os
-from qautils.http.headers_utils import HEADER_CONTENT_TYPE, HEADER_REPRESENTATION_XML, HEADER_REPRESENTATION_JSON
 
 
 # Load logging configuration from file if it exists
@@ -50,6 +49,7 @@ def _get_pretty_body(headers, body):
     :return: Body pretty printed (string)
     """
 
+    from qautils.http.headers_utils import HEADER_CONTENT_TYPE, HEADER_REPRESENTATION_XML, HEADER_REPRESENTATION_JSON
     if HEADER_CONTENT_TYPE in headers:
         if HEADER_REPRESENTATION_XML == headers[HEADER_CONTENT_TYPE]:
             xml_parsed = parseString(body)

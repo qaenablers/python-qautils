@@ -13,6 +13,7 @@ __version__ = "1.1.0"
 
 
 # Env properties.
+PROPERTIES_FILE = "./conf/settings.json"
 PROPERTIES_CONFIG_ENV = "environment"
 PROPERTIES_CONFIG_ENV_NAME = "name"
 

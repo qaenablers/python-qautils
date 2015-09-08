@@ -105,7 +105,7 @@ def model_to_request_body(body_model, content_type, body_model_root_element=None
             raise e
 
 
-def delete_element_when_value_none(data_structure):
+def delete_model_element_when_value_is_none(data_structure):
     """
     This method remove all entries in a Python dict when its value is None.
     :param data_structure: Python dict (lists are supported). e.i:
