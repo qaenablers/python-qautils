@@ -1,20 +1,31 @@
 {
     "environment": {
-        "name": "integration",
-        "logs_path": "/var/logs"
+        "name": "integration"
     },
     "remote_logs": {
       "capture_local_path": "./logs/remote"
     },
-    "example_http_service": {
+    "example_http_service_1": {
         "protocol": "http",
         "host": "1.2.3.5",
         "port": "5678",
         "resource": "myservice/base",
         "host_user": "root",
         "host_password": "",
-        "private_key_location": "./service_host_dsa",
+        "host_private_key_location": "./service_host_dsa",
         "service_log_path": "/var/log/http_service/",
-        "service_log_file_name": "http.log"
+        "service_log_file_names": ["http.log"]
+    },
+    "example_http_service_2": {
+        "protocol": "http",
+        "host": "1.2.3.5",
+        "port": "5678",
+        "resource": "myservice/base",
+        "os_username": "openstack",
+        "os_password": "admin-pass",
+        "os_tenant_id": "00000000000000000000000000000001",
+        "os_tenant_name": "admin",
+        "os_domain_name": "default",
+        "os_auth_url": "http://my-keystone.org:4731/v2.0/"
     }
 }
