@@ -18,28 +18,16 @@ import sys
 import json
 
 from qautils.logger.logger_utils import get_logger
+from qautils.configuration.configuration_properties import PROPERTIES_CONFIG_REMOTE_LOGS, \
+    PROPERTIES_CONFIG_REMOTE_LOGS_CAPTURE_LOCAL_PATH
 
 
 __logger__ = get_logger(__name__)
 
-# Env properties.
-PROPERTIES_FILE = "./settings/settings.json"
-PROPERTIES_CONFIG_ENV = "environment"
-PROPERTIES_CONFIG_ENV_NAME = "name"
-
-# Remote logs properties
-PROPERTIES_CONFIG_REMOTE_LOGS = "remote_logs"
-PROPERTIES_CONFIG_REMOTE_LOGS_CAPTURE_LOCAL_PATH = "capture_local_path"
-
-# Generic service properties
-PROPERTIES_CONFIG_SERVICE_PROTOCOL = "protocol"
-PROPERTIES_CONFIG_SERVICE_HOST = "host"
-PROPERTIES_CONFIG_SERVICE_PORT = "port"
-PROPERTIES_CONFIG_SERVICE_RESOURCE = "resource"
-
-
-# Loaded configuration
+# Loaded configuration. Module variable with all loaded properties from PROPERTIES_FILE
 config = None
+
+PROPERTIES_FILE = "./settings/settings.json"
 
 
 def _load_project_properties():

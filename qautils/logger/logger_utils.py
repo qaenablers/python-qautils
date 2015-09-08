@@ -23,11 +23,7 @@ import logging.config
 from xml.dom.minidom import parseString
 import json
 import os
-
-HEADER_CONTENT_TYPE = u'content-type'
-HEADER_REPRESENTATION_JSON = u'application/json'
-HEADER_REPRESENTATION_XML = u'application/xml'
-HEADER_REPRESENTATION_TEXTPLAIN = u'text/plain'
+from qautils.http.headers_utils import HEADER_CONTENT_TYPE, HEADER_REPRESENTATION_XML, HEADER_REPRESENTATION_JSON
 
 
 # Load logging configuration from file if it exists
