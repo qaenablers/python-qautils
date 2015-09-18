@@ -120,12 +120,12 @@ def delete_model_element_when_value_is_none(data_structure):
     """
     if isinstance(data_structure, list):
         for element in data_structure:
-            delete_element_when_value_none(element)
+            delete_model_element_when_value_is_none(element)
     elif isinstance(data_structure, dict):
         for element in data_structure.keys():
             if data_structure[element] is None:
                 del data_structure[element]
             else:
-                delete_element_when_value_none(data_structure[element])
+                delete_model_element_when_value_is_none(data_structure[element])
                 if len(data_structure[element]) == 0:
                     del data_structure[element]
