@@ -13,7 +13,9 @@ __version__ = "1.1.0"
 
 
 # Env properties.
-PROPERTIES_FILE = "./conf/settings.json"
+CONFIG_DIR = "conf"
+PROPERTIES_FILE = "./{}/settings.json".format(CONFIG_DIR)
+PROPERTIES_LOG_FILE = "./{}/logging.conf".format(CONFIG_DIR)
 PROPERTIES_CONFIG_ENV = "environment"
 PROPERTIES_CONFIG_ENV_NAME = "name"
 

@@ -23,11 +23,12 @@ import logging.config
 from xml.dom.minidom import parseString
 import json
 import os
+from qautils.configuration.configuration_properties import PROPERTIES_LOG_FILE
 
 
 # Load logging configuration from file if it exists
-if os.path.exists("./settings/logging.conf"):
-    logging.config.fileConfig("./settings/logging.conf")
+if os.path.exists(PROPERTIES_LOG_FILE):
+    logging.config.fileConfig(PROPERTIES_LOG_FILE)
 
 
 def get_logger(name):
