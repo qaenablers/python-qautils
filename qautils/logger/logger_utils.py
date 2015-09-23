@@ -15,7 +15,7 @@ __author__ = "Telefonica I+D, @jframos"
 __project__ = "python-qautils [https://github.com/qaenablers/python-qautils]"
 __copyright__ = "Copyright 2015"
 __license__ = " Apache License, Version 2.0"
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 
 
 import logging
