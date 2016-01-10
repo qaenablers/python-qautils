@@ -8,7 +8,7 @@ __author__ = "@jframos"
 __project__ = "python-qautils [https://github.com/qaenablers/python-qautils]"
 __copyright__ = "Copyright 2015"
 __license__ = " Apache License, Version 2.0"
-__version__ = "1.2.0"
+__version__ = "1.2.1"
 
 from setuptools import setup
 from setuptools import find_packages
@@ -24,7 +24,7 @@ install_reqs = parse_requirements(REQUIREMENTS_FILE, session=False)
 requirements_list = [str(ir.req) for ir in install_reqs]
 
 setup(name='python-qautils',
-      version='1.2.0',
+      version='1.2.1',
       description='QAUtils. Utilities for Software Quality Assurance - Python',
       author='@jframos',
       license='Apache 2.0',

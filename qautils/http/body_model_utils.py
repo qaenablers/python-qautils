@@ -11,7 +11,7 @@ __author__ = "@jframos"
 __project__ = "python-qautils [https://github.com/qaenablers/python-qautils]"
 __copyright__ = "Copyright 2015"
 __license__ = " Apache License, Version 2.0"
-__version__ = "1.2.0"
+__version__ = "1.2.1"
 
 
 from json import JSONEncoder
@@ -124,7 +124,6 @@ def delete_model_element_when_value_is_none(data_structure):
     :return: None. The data_structure given by params is modified deleting entries with None value.
     """
 
-    __logger__.info("Deleting attributes with None value in the given data structure model")
     if isinstance(data_structure, list):
         for element in data_structure:
             delete_model_element_when_value_is_none(element)
