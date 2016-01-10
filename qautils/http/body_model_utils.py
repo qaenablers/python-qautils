@@ -61,6 +61,10 @@ def response_body_to_dict(http_requests_response, content_type, xml_root_element
         __logger__.error("SERVER ERROR. Response body will not be parsed.")
         return None
 
+    if not http_requests_response.content:
+        __logger__.warn("The response body content is empty. It not will parsed.")
+        return None
+
     if HEADER_REPRESENTATION_JSON == content_type:
         try:
             return http_requests_response.json()
@@ -124,7 +128,6 @@ def delete_model_element_when_value_is_none(data_structure):
     :return: None. The data_structure given by params is modified deleting entries with None value.
     """
 
-    __logger__.info("Deleting attributes with None value in the given data structure model")
     if isinstance(data_structure, list):
         for element in data_structure:
             delete_model_element_when_value_is_none(element)
@@ -135,5 +138,5 @@ def delete_model_element_when_value_is_none(data_structure):
             else:
                 delete_model_element_when_value_is_none(data_structure[element])
                 if (isinstance(data_structure[element], list) or isinstance(data_structure[element], dict)) \
-                        and (data_structure[element]) == 0:
+                        and len(data_structure[element]) == 0:
                     del data_structure[element]
