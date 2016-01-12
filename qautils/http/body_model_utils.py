@@ -61,6 +61,10 @@ def response_body_to_dict(http_requests_response, content_type, xml_root_element
         __logger__.error("SERVER ERROR. Response body will not be parsed.")
         return None
 
+    if not http_requests_response.content:
+        __logger__.warn("The response body content is empty. It not will parsed.")
+        return None
+
     if HEADER_REPRESENTATION_JSON == content_type:
         try:
             return http_requests_response.json()
